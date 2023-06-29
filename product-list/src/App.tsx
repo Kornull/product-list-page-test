@@ -1,8 +1,26 @@
+import { Route, Routes } from 'react-router';
+
+import { MainPage } from './pages/Main';
+import { Layout } from './components/Layout';
+import { NotFoundPage } from './pages/NotFOund';
+
 function App() {
   return (
-    <h1>opps
-
-    </h1>
+    <Routes>
+      <Route
+        path="/"
+        element={<Layout />}
+      >
+        <Route
+          index
+          element={<MainPage />}
+        />
+        <Route
+          path="*"
+          element={<NotFoundPage />}
+        />
+      </Route>
+    </Routes>
   );
 }
 
