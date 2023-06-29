@@ -1,0 +1,24 @@
+@import '/src//scss/constants.scss';
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: $primary-color;
+  font-size: $size32px;
+  font-family: $font-anek;
+  text-transform: uppercase;
+
+  &Container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    max-width: $default-width;
+    width: $percent100;
+    margin: $default-margin;
+    padding: 34px 92px;
+  }
+
+  &Link {
+    color: $default-text-color;
+  }
+}

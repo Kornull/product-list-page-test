@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@600&family=Poppins:wght@400;500&display=swap');
+
+@import './scss/constants';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: $default-color;
+  font-family: $font-poppins;
+ }
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  font: inherit;
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  width: $percent100;
+  max-width: $default-width;
+  margin: $default-margin;
+  background: none;
+}
