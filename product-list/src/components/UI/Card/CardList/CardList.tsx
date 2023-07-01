@@ -22,7 +22,7 @@ export const CardList = ({ cards }: Props) => {
             columnWidth={280}
             rowHeight={390}
             height={height}
-            width={1280}
+            width={1180}
             itemData={cards}
           >
             {({ rowIndex, columnIndex, style }) => {

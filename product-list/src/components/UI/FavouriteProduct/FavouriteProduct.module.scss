@@ -1,0 +1,16 @@
+.favourite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: calc(100vh - 100px);
+
+  &List{
+    width: 406px;
+    height: 880px;
+    background-image: url('bg-list.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;;
+  }
+}
