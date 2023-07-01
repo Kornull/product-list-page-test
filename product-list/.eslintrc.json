@@ -10,6 +10,7 @@
   "settings": {
     "import/resolver": {
       "node": {
+        "paths": ["src"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
@@ -23,10 +24,13 @@
   "rules": {
     "react-refresh/only-export-components": "warn",
     "no-console": "warn",
+    "import/extensions": "off",
+    "commonjs": true,
+    "amd": true,
     "prefer-const": "error",
     "quotes": ["error", "single"],
     "jsx-quotes": ["error", "prefer-double"],
-    "indent": ["warn", 2, {"ArrayExpression": 1, "ImportDeclaration": 1}],
+    "indent": ["warn", 2, { "ArrayExpression": 1, "ImportDeclaration": 1 }],
     "max-len": ["error", { "code": 120 }],
     "comma-dangle": ["error", "always-multiline"],
     "semi": ["warn", "always"],
@@ -46,6 +50,6 @@
         "newlines-between": "always-and-inside-groups"
       }
     ],
-    "no-multiple-empty-lines": ["error", {"max": 1, "maxBOF": 0, "maxEOF": 0}]
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }]
   }
 }

@@ -70,3 +70,13 @@ main {
   margin: $default-margin;
   background: none;
 }
+
+.list {
+  height: calc(100vh - 100px);
+  display: flex;
+
+}
+
+.width{
+  width: 262px;
+}

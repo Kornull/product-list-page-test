@@ -5,7 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-import { API_CALLS, FoodDataType } from '../../types';
+import { API_CALLS, FoodDataType } from 'src/types';
 
 import styles from './CardProduct.module.scss';
 
@@ -13,14 +13,13 @@ type Props = {
   card: FoodDataType;
 };
 
-export default function RecipeReviewCard({ card }: Props) {
+export const CardProduct = ({ card }: Props) => {
   return (
     <Card
       sx={{ maxWidth: 262, borderRadius: 7, boxShadow: 'none' }}
       className={styles.card}
     >
       <CardMedia
-        // ={{ margin: 0 }}
         component="img"
         image={`${API_CALLS.DEFAULT_LINK}${card.src}`}
         alt={card.name}
@@ -52,4 +51,4 @@ export default function RecipeReviewCard({ card }: Props) {
       </CardContent>
     </Card>
   );
-}
+};

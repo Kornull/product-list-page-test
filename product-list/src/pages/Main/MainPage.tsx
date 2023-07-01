@@ -1,20 +1,13 @@
-import { useEffect } from 'react';
+import { useGlobalState } from 'src/state';
 
-import CardProduct from '../../components/UI/CardProduct';
-import { useGlobalState } from '../../state/state';
+import { CardList } from 'src/components/UI/Card/CardList';
 
 export const MainPage = () => {
   const [store, setStore] = useGlobalState('data');
 
-  useEffect(() => {
-    console.log(store);
-  }, []);
   return (
     <>
-      {store.map((card) => (
-        <CardProduct key={card.id} card={card} />
-      ))}
-      <div>MainPage</div>
+      <CardList cards={store} />
     </>
   );
 };
