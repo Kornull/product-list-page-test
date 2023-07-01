@@ -1,0 +1,80 @@
+@import '../../scss/constants.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 262px;
+  height: 350px;
+  position: relative;
+  padding: 15px;
+  border-radius: 75%;
+  background-color: $default-color;
+  background-image: url('/public/bg-card.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap: 10px;
+
+  &Image {
+    max-height: 180px;
+    max-width: 200px;
+    margin: 0;
+  }
+
+
+  &Description {
+    font-family: $font-poppins;
+    font-size: $size20px;
+    font-weight: 300;
+
+    &Block {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      justify-content: start;
+      width: 100%;
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 0;
+
+    }
+  }
+
+  &Price {
+    font-size: $size24px;
+    font-weight: 500;
+
+    &Block {
+      position: absolute;
+      bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      height: 40px;
+      padding: 0;
+    }
+  }
+
+  &ButtonLike {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: $primary-color;
+    padding: 0;
+    border-radius: 6px;
+
+    &Icon {
+     color: #fff;
+    }
+
+    &IconLiked {
+      color: $default-text-color;
+    }
+  }
+
+
+}
