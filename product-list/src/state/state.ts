@@ -11,12 +11,12 @@ const getData = async () => {
 
 type InitialType = {
   data: FoodDataType[];
+  product: FoodDataType | null;
 };
 
 export const InitialState: InitialType = {
   data: await getData(),
+  product: null,
 };
 
-const { useGlobalState } = createGlobalState(InitialState);
-
-export { useGlobalState };
+export const { useGlobalState } = createGlobalState(InitialState);

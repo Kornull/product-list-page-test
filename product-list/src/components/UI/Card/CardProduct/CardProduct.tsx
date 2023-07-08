@@ -1,13 +1,14 @@
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import IconButton from '@mui/material/IconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import { Link } from 'react-router-dom';
 
 import { API_CALLS, FoodDataType } from '../../../../types';
+
+import { useGlobalState } from '../../../../state';
+
+import { LikeButton } from '../../LikeButton/LikeButton';
 
 import styles from './CardProduct.module.scss';
 
@@ -15,14 +16,18 @@ type Props = {
   card: FoodDataType;
 };
 
-const clickLiked = (ev: React.MouseEvent) => {
-  ev.preventDefault();
-  console.log('ddd');
-};
-
 export const CardProduct = ({ card }: Props) => {
+  const [product, setProduct] = useGlobalState('product');
+  const handleClickCard = () => {
+    setProduct(card);
+    // dispatch({ type: 'id', data: card.id });
+  };
+
   return (
-    <Link to={`/product/${card.name}`}>
+    <Link
+      to={`/product/${card.name}`}
+      onClick={handleClickCard}
+    >
       <Card
         sx={{ maxWidth: 262, borderRadius: 7, boxShadow: 'none' }}
         className={styles.card}
@@ -44,18 +49,7 @@ export const CardProduct = ({ card }: Props) => {
           </span>
           <div className={styles.cardPriceBlock}>
             <span className={styles.cardPrice}>${card.price}</span>
-            <CardActions
-              disableSpacing
-              className={styles.cardButtonLike}
-              onClick={(ev) => clickLiked(ev)}
-            >
-              <IconButton
-                aria-label="add to favorites"
-                style={{ padding: 0 }}
-              >
-                <FavoriteIcon className={styles.cardButtonLikeIcon} />
-              </IconButton>
-            </CardActions>
+            <LikeButton idProduct={card.id} styleButton={styles.cardButtonLike}/>
           </div>
         </CardContent>
       </Card>
