@@ -23,7 +23,7 @@
 
   &Description {
     font-family: $font-poppins;
-    font-size: $size20px;
+    font-size: $size18px;
     font-weight: 300;
 
     &Block {
@@ -39,7 +39,7 @@
   }
 
   &Price {
-    font-size: $size24px;
+    font-size: $size20px;
     font-weight: 500;
 
     &Block {
@@ -71,4 +71,5 @@
       color: $default-text-color;
     }
   }
+
 }

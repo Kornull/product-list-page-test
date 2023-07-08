@@ -1,12 +1,11 @@
-import { useGlobalState } from 'src/state';
-
-import { CardList } from 'src/components/UI/Card/CardList';
-import { FavouriteProduct } from 'src/components/UI/FavouriteProduct/FavouriteProduct';
+import { CardList } from '../../components/UI/Card/CardList';
+import { FavouriteProduct } from '../../components/UI/FavouriteProduct/FavouriteProduct';
+import { useGlobalState } from '../../state';
 
 import styles from './MainPage.module.scss';
 
 export const MainPage = () => {
-  const [store, setStore] = useGlobalState('data');
+  const [store] = useGlobalState('data');
 
   return (
     <div className={styles.products}>
