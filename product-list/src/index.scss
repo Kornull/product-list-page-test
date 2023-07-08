@@ -21,7 +21,7 @@ body {
   margin: 0;
   background-color: $default-color;
   font-family: $font-poppins;
- }
+}
 
 a {
   text-decoration: none;
@@ -72,11 +72,10 @@ main {
 }
 
 .list {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
   display: flex;
-
 }
 
-.width{
+.width {
   width: 262px;
 }

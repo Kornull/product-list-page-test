@@ -4,24 +4,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 262px;
-  height: 350px;
-  position: relative;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 262px;
+  height: 100%;
+  max-height: 350px;
   padding: 15px;
   border-radius: 75%;
+  border: 2px dashed $default-text-color;
   background-color: $default-color;
-  background-image: url('/public/bg-card.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  gap: 10px;
 
   &Image {
     max-height: 180px;
     max-width: 200px;
     margin: 0;
   }
-
 
   &Description {
     font-family: $font-poppins;
@@ -37,7 +35,6 @@
       max-width: 90%;
       margin: 0 auto;
       padding: 0;
-
     }
   }
 
@@ -46,14 +43,13 @@
     font-weight: 500;
 
     &Block {
-      position: absolute;
-      bottom: 22px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 80%;
+      width: 90%;
       height: 40px;
       padding: 0;
+      margin: 20px auto 0;
     }
   }
 
@@ -68,13 +64,11 @@
     border-radius: 6px;
 
     &Icon {
-     color: #fff;
+      color: #fff;
     }
 
     &IconLiked {
       color: $default-text-color;
     }
   }
-
-
 }

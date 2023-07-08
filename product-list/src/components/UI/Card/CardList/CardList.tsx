@@ -17,19 +17,19 @@ export const CardList = ({ cards }: Props) => {
       <AutoSizer>
         {({ height }) => (
           <List
-            columnCount={4}
+            columnCount={3}
             rowCount={Math.floor(cards.length / 4)}
             columnWidth={280}
             rowHeight={390}
             height={height}
-            width={1180}
+            width={880}
             itemData={cards}
           >
             {({ rowIndex, columnIndex, style }) => {
               const index = columnIndex + rowIndex * 4
               return (
                 <div
-                  style={{...style, paddingTop: '84px'}}
+                  style={{...style }}
 
                 >
                   <CardProduct

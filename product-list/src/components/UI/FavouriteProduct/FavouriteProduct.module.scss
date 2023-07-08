@@ -1,16 +1,14 @@
 .favourite {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 500px;
-  height: calc(100vh - 100px);
+  position: relative;
+  width: 460px;
+  height: inherit;
+  background:red;
+  padding: 16px;
 
-  &List{
-    width: 406px;
-    height: 880px;
-    background-image: url('bg-list.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;;
+  &List {
+    min-height: 460px;
+    max-height: 660px;
+    border: 2px dashed #000;
+    border-radius: 15px;
   }
 }
