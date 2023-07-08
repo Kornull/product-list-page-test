@@ -26,17 +26,13 @@
   &Info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 60%;
   }
 
   &Price {
     font-size: $size32px;
     color: $default-text-color;
-
-    & > span {
-      font-family: $font-anek;
-    }
+    font-family: $font-anek;
   }
 
   &Button {

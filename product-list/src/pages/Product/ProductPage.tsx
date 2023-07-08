@@ -24,7 +24,7 @@ export const ProductPage = () => {
               <h1 className={styles.productTitle}>{product.name}</h1>
               <div className={styles.productInfo}>
                 <h2 className={styles.productPrice}>
-                  Cost: <span>{product.price}$</span>
+                  {product.price}$
                 </h2>
                 <LikeButton
                   idProduct={product.id}
