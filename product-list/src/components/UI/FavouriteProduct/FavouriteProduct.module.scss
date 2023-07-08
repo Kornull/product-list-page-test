@@ -1,14 +1,15 @@
+@import '../../../scss/constants';
+
 .favourite {
   position: relative;
   width: 460px;
   height: inherit;
-  background:red;
   padding: 16px;
 
   &List {
     min-height: 460px;
     max-height: 660px;
-    border: 2px dashed #000;
+    border: 2px dashed $default-text-color;
     border-radius: 15px;
   }
 }

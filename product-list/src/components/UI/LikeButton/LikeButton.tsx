@@ -11,7 +11,6 @@ type Props = {
 
 export const LikeButton = ({ idProduct, styleButton }: Props) => {
   const clickLiked = (ev: React.MouseEvent) => {
-    console.log(typeof idProduct, idProduct);
     ev.preventDefault();
   };
 

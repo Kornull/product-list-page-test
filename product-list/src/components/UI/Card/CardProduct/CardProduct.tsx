@@ -43,8 +43,8 @@ export const CardProduct = ({ card }: Props) => {
           style={{ padding: 0 }}
         >
           <span className={styles.cardDescription}>
-            {card.name.length > 34
-              ? `${card.name.slice(0, 34)}...`
+            {card.name.length > 32
+              ? `${card.name.slice(0, 32)}...`
               : `${card.name}`}
           </span>
           <div className={styles.cardPriceBlock}>

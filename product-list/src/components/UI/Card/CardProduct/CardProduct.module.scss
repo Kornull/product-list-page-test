@@ -6,9 +6,9 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: 100%;
+  width: $percent100;
   max-width: 262px;
-  height: 100%;
+  height: $percent100;
   max-height: 350px;
   padding: 15px;
   border-radius: 75%;
@@ -31,7 +31,7 @@
       align-items: start;
       flex-direction: column;
       justify-content: start;
-      width: 100%;
+      width: $percent100;
       max-width: 90%;
       margin: 0 auto;
       padding: 0;
@@ -62,8 +62,6 @@
     background-color: $primary-color;
     padding: 0;
     border-radius: 6px;
-
-   
   }
 
 }

@@ -1,19 +1,52 @@
-.about {
+@import '../../scss/constants';
+
+.product {
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  width: $percent100;
   height: 600px;
-  border: 1px solid red;
   padding: 10px;
 
   &Img {
     width: 100%;
-    max-width: 348px;
+    max-width: 248px;
   }
 
   &Description {
+    width: 560px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+  }
+  &Title {
+    font-size: $size24px;
+  }
+
+  &Info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+  }
+
+  &Price {
+    font-size: $size32px;
+    color: $default-text-color;
+
+    & > span {
+      font-family: $font-anek;
+    }
+  }
+
+  &Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: $primary-color;
+    padding: 0;
+    border-radius: 6px;
   }
 }

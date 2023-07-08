@@ -8,7 +8,11 @@ export const MainPage = () => {
   return (
     <>
       <FavouriteProduct />
-      <CardList cards={store} />
+      {store.length ? (
+        <CardList cards={store} />
+      ) : (
+        <span className="error">oops!!!! something with network!</span>
+      )}
     </>
   );
 };
