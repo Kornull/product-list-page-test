@@ -18,9 +18,9 @@ type Props = {
 
 export const CardProduct = ({ card }: Props) => {
   const [product, setProduct] = useGlobalState('product');
+
   const handleClickCard = () => {
     setProduct(card);
-    // dispatch({ type: 'id', data: card.id });
   };
 
   return (
@@ -49,7 +49,10 @@ export const CardProduct = ({ card }: Props) => {
           </span>
           <div className={styles.cardPriceBlock}>
             <span className={styles.cardPrice}>${card.price}</span>
-            <LikeButton styleButton={styles.cardButtonLike} product={card}/>
+            <LikeButton
+              styleButton={styles.cardButtonLike}
+              product={card}
+            />
           </div>
         </CardContent>
       </Card>

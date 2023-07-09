@@ -1,11 +1,14 @@
-import { useEffect } from 'react';
+import { FoodDataType } from '../../../../types';
 
-import { useGlobalState } from '../../../../state';
+type Props = {
+  card: FoodDataType;
+};
 
-export const FavouriteCard = () => {
-  const [product] = useGlobalState('product');
-  useEffect(() => {
-    console.log(product);
-  }, [product]);
-  return <div>FavouriteCard</div>;
+export const FavouriteCard = ({ card }: Props) => {
+  //   const [product] = useGlobalState('product');
+  //   useEffect(() => {
+  //     console.log(card);
+  //   }, [product]);
+  console.log(card);
+  return <div>{card.name}</div>;
 };

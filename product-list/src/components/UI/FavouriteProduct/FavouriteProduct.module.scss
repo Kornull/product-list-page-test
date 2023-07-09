@@ -11,5 +11,6 @@
     max-height: 660px;
     border: 2px dashed $default-text-color;
     border-radius: 15px;
+    overflow-y: auto;
   }
 }

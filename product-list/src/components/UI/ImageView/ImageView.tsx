@@ -2,6 +2,7 @@ import ReactImageMagnify from 'react-image-magnify';
 
 import { API_CALLS } from '../../../types';
 
+import styles from './ImageView.module.scss';
 type Props = {
   isOpen: boolean;
   name: string;
@@ -13,27 +14,26 @@ export const ImageView = ({ isOpen, name, url }: Props) => {
 
   return (
     <>
-      {isOpen ? (
-        <ReactImageMagnify
-          {...{
-            smallImage: {
-              alt: `${name}`,
-              isFluidWidth: true,
-              src: urlImage,
-            },
-            largeImage: {
-              src: urlImage,
-              width: 1200,
-              height: 1800,
-            },
-          }}
-        />
-      ) : (
-        <img
-          src={urlImage}
-          alt={`${name}`}
-        />
-      )}
+      <ReactImageMagnify
+        className={isOpen ? styles.open : styles.close}
+        {...{
+          smallImage: {
+            alt: `${name}`,
+            isFluidWidth: true,
+            src: urlImage,
+          },
+          largeImage: {
+            src: urlImage,
+            width: 600,
+            height: 600,
+          },
+        }}
+      />
+      <img
+        className={isOpen ? styles.close : styles.open}
+        src={urlImage}
+        alt={`${name}`}
+      />
     </>
   );
 };

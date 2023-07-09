@@ -16,9 +16,14 @@ type Props = {
 export const LikeButton = ({ styleButton, product }: Props) => {
   const [favorites, setFavourites] = useGlobalState('favourite');
 
-  const clickLiked = (ev: React.MouseEvent) => {
+  const clickLiked = (ev: React.MouseEvent): void => {
     ev.preventDefault();
-    setFavourites([...favorites, product]);
+    if (!favorites.includes(product)) {
+      setFavourites([...favorites, product]);
+    } else {
+      const newFavourites = favorites.filter((data) => data.id !== product.id);
+      setFavourites([...newFavourites]);
+    }
   };
 
   return (

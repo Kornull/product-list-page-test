@@ -18,11 +18,13 @@ export const ProductPage = () => {
         {product !== null && (
           <>
             <div className={styles.productImg}>
-              <ImageView
-                isOpen={isOpen}
-                name={product.name}
-                url={product.src}
-              />
+              <div className={styles.productImgContainer}>
+                <ImageView
+                  isOpen={isOpen}
+                  name={product.name}
+                  url={product.src}
+                />
+              </div>
               <ImageButton
                 isOpen={isOpen}
                 changeView={setIsOpen}
