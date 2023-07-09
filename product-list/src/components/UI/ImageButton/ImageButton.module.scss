@@ -1,0 +1,17 @@
+@import '../../../scss/constants';
+
+.action {
+  color: $default-text-color;
+  &:hover {
+    transition: color 0.3s linear;
+    color: #0000ff;
+  }
+}
+
+.success {
+  color: #009400;
+  &:hover {
+    transition: color 0.3s linear;
+    color: #f700ff;
+  }
+}

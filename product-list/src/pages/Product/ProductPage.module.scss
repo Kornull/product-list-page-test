@@ -9,6 +9,10 @@
   padding: 10px;
 
   &Img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 248px;
   }

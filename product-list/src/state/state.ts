@@ -16,11 +16,13 @@ const getData = async (): Promise<FoodDataType[] | []> => {
 type InitialType = {
   data: FoodDataType[];
   product: FoodDataType | null;
+  openImg: boolean;
 };
 
 export const InitialState: InitialType = {
   data: await getData(),
   product: null,
+  openImg: false,
 };
 
 export const { useGlobalState } = createGlobalState(InitialState);

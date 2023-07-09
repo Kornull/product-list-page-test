@@ -1,12 +1,15 @@
-import { FavouriteProduct } from '../../components/UI/FavouriteProduct/FavouriteProduct';
-import { LikeButton } from '../../components/UI/LikeButton/LikeButton';
 import { useGlobalState } from '../../state';
-import { API_CALLS } from '../../types';
+
+import { FavouriteProduct } from '../../components/UI/FavouriteProduct';
+import { LikeButton } from '../../components/UI/LikeButton';
+import { ImageButton } from '../../components/UI/ImageButton';
+import { ImageView } from '../../components/UI/ImageView';
 
 import styles from './ProductPage.module.scss';
 
 export const ProductPage = () => {
   const [product] = useGlobalState('product');
+  const [isOpen, setIsOpen] = useGlobalState('openImg');
 
   return (
     <>
@@ -15,17 +18,20 @@ export const ProductPage = () => {
         {product !== null && (
           <>
             <div className={styles.productImg}>
-              <img
-                src={`${API_CALLS.DEFAULT_LINK}${product.src}`}
-                alt=""
+              <ImageView
+                isOpen={isOpen}
+                name={product.name}
+                url={product.src}
+              />
+              <ImageButton
+                isOpen={isOpen}
+                changeView={setIsOpen}
               />
             </div>
             <div className={styles.productDescription}>
               <h1 className={styles.productTitle}>{product.name}</h1>
               <div className={styles.productInfo}>
-                <h2 className={styles.productPrice}>
-                  {product.price}$
-                </h2>
+                <h2 className={styles.productPrice}>{product.price}$</h2>
                 <LikeButton
                   idProduct={product.id}
                   styleButton={styles.productButton}
