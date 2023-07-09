@@ -9,6 +9,8 @@ type Props = {
 };
 
 export const ImageView = ({ isOpen, name, url }: Props) => {
+  const urlImage = `${API_CALLS.DEFAULT_LINK}${url}`;
+
   return (
     <>
       {isOpen ? (
@@ -17,10 +19,10 @@ export const ImageView = ({ isOpen, name, url }: Props) => {
             smallImage: {
               alt: `${name}`,
               isFluidWidth: true,
-              src: `${API_CALLS.DEFAULT_LINK}${url}`,
+              src: urlImage,
             },
             largeImage: {
-              src: `${API_CALLS.DEFAULT_LINK}${url}`,
+              src: urlImage,
               width: 1200,
               height: 1800,
             },
@@ -28,7 +30,7 @@ export const ImageView = ({ isOpen, name, url }: Props) => {
         />
       ) : (
         <img
-          src={`${API_CALLS.DEFAULT_LINK}${url}`}
+          src={urlImage}
           alt={`${name}`}
         />
       )}

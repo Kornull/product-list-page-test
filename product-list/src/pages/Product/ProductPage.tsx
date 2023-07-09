@@ -33,7 +33,7 @@ export const ProductPage = () => {
               <div className={styles.productInfo}>
                 <h2 className={styles.productPrice}>{product.price}$</h2>
                 <LikeButton
-                  idProduct={product.id}
+                  product={product}
                   styleButton={styles.productButton}
                 />
               </div>

@@ -17,12 +17,14 @@ type InitialType = {
   data: FoodDataType[];
   product: FoodDataType | null;
   openImg: boolean;
+  favourite: FoodDataType[]
 };
 
 export const InitialState: InitialType = {
   data: await getData(),
   product: null,
   openImg: false,
+  favourite: [],
 };
 
 export const { useGlobalState } = createGlobalState(InitialState);

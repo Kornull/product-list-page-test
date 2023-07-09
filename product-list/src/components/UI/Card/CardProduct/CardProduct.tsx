@@ -49,7 +49,7 @@ export const CardProduct = ({ card }: Props) => {
           </span>
           <div className={styles.cardPriceBlock}>
             <span className={styles.cardPrice}>${card.price}</span>
-            <LikeButton idProduct={card.id} styleButton={styles.cardButtonLike}/>
+            <LikeButton styleButton={styles.cardButtonLike} product={card}/>
           </div>
         </CardContent>
       </Card>

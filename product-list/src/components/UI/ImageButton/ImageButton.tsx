@@ -16,8 +16,8 @@ export const ImageButton = ({ isOpen, changeView }: Props) => {
   };
 
   useEffect(() => {
-    console.log(isOpen);
-  }, [isOpen]);
+    changeView(false);
+  }, []);
 
   return (
     <IconButton
@@ -28,9 +28,7 @@ export const ImageButton = ({ isOpen, changeView }: Props) => {
     >
       <ZoomInIcon
         fontSize="large"
-        className={`${styles.action} ${
-          isOpen ? styles.success : ''
-        }`}
+        className={`${styles.action} ${isOpen ? styles.success : ''}`}
       />
     </IconButton>
   );

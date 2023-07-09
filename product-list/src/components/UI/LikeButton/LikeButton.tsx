@@ -2,16 +2,23 @@ import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
+import { useGlobalState } from '../../../state';
+
+import { FoodDataType } from '../../../types';
+
 import styles from './LikeButton.module.scss';
 
 type Props = {
-  idProduct: number;
-  styleButton: string
+  styleButton: string;
+  product: FoodDataType;
 };
 
-export const LikeButton = ({ idProduct, styleButton }: Props) => {
+export const LikeButton = ({ styleButton, product }: Props) => {
+  const [favorites, setFavourites] = useGlobalState('favourite');
+
   const clickLiked = (ev: React.MouseEvent) => {
     ev.preventDefault();
+    setFavourites([...favorites, product]);
   };
 
   return (
