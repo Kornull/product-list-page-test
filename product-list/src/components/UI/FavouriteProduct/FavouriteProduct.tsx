@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+import List from '@mui/material/List';
+
 import { useGlobalState } from '../../../state';
 
 import { FoodDataType, STATE_DATA_CALLS } from '../../../types';
@@ -16,13 +18,25 @@ export const FavouriteProduct = () => {
   return (
     <div className={styles.favourite}>
       <div className={styles.favouriteList}>
-        {favourites.length > 0 &&
-          favourites.map((product: FoodDataType) => (
-            <FavouriteCard
-              card={product}
-              key={product.id}
-            />
+        <List
+          sx={{
+            width: '100%',
+            bgcolor: 'background.paper',
+            position: 'relative',
+            overflowY: 'auto',
+            '& ul': { padding: 10 },
+          }}
+          subheader={<li />}
+        >
+          {favourites.map((card: FoodDataType) => (
+            <li
+              className={styles.favouriteListItem}
+              key={`${card.name}-${card.id}`}
+            >
+              <FavouriteCard card={card} />
+            </li>
           ))}
+        </List>
       </div>
     </div>
   );
