@@ -4,11 +4,10 @@ import CardContent from '@mui/material/CardContent';
 
 import { Link } from 'react-router-dom';
 
-import { API_CALLS, FoodDataType } from '../../../../types';
-
 import { useGlobalState } from '../../../../state';
+import { API_CALLS, FoodDataType, STATE_DATA_CALLS } from '../../../../types';
 
-import { LikeButton } from '../../LikeButton/LikeButton';
+import { LikeButton } from '../../../Buttons/LikeButton';
 
 import styles from './CardProduct.module.scss';
 
@@ -17,7 +16,7 @@ type Props = {
 };
 
 export const CardProduct = ({ card }: Props) => {
-  const [product, setProduct] = useGlobalState('product');
+  const [product, setProduct] = useGlobalState(STATE_DATA_CALLS.PRODUCT);
 
   const handleClickCard = () => {
     setProduct(card);

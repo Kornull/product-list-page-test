@@ -3,8 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import { useGlobalState } from '../../../state';
-
-import { FoodDataType } from '../../../types';
+import { FoodDataType, STATE_DATA_CALLS } from '../../../types';
 
 import styles from './LikeButton.module.scss';
 
@@ -14,7 +13,7 @@ type Props = {
 };
 
 export const LikeButton = ({ styleButton, product }: Props) => {
-  const [favorites, setFavourites] = useGlobalState('favourite');
+  const [favorites, setFavourites] = useGlobalState(STATE_DATA_CALLS.FAVOURITE);
 
   const clickLiked = (ev: React.MouseEvent): void => {
     ev.preventDefault();

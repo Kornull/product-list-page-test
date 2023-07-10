@@ -1,15 +1,16 @@
 import { useGlobalState } from '../../state';
 
 import { FavouriteProduct } from '../../components/UI/FavouriteProduct';
-import { LikeButton } from '../../components/UI/LikeButton';
-import { ImageButton } from '../../components/UI/ImageButton';
+import { ImageButton } from '../../components/Buttons/ImageButton';
 import { ImageView } from '../../components/UI/ImageView';
+
+import { LikeButton } from '../../components/Buttons/LikeButton';
 
 import styles from './ProductPage.module.scss';
 
 export const ProductPage = () => {
   const [product] = useGlobalState('product');
-  const [isOpen, setIsOpen] = useGlobalState('openImg');
+  const [isOpen,setIsOpen] = useGlobalState('openImg');
 
   return (
     <>

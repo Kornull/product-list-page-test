@@ -2,14 +2,14 @@ import { useEffect } from 'react';
 
 import { useGlobalState } from '../../../state';
 
-import { FoodDataType } from '../../../types';
+import { FoodDataType, STATE_DATA_CALLS } from '../../../types';
 
 import { FavouriteCard } from './FavouriteCard';
 
 import styles from './FavouriteProduct.module.scss';
 
 export const FavouriteProduct = () => {
-  const [favourites] = useGlobalState('favourite');
+  const [favourites] = useGlobalState(STATE_DATA_CALLS.FAVOURITE);
   useEffect(() => {
     console.log(favourites);
   }, [favourites]);
