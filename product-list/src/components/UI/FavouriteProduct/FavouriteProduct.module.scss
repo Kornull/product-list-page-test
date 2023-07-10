@@ -2,19 +2,22 @@
 
 .favourite {
   position: relative;
-  width: 460px;
+  width: 320px;
   height: inherit;
-  padding: 16px;
+  margin-bottom: 25px;
 
   &List {
+    width: inherit;
     min-height: 440px;
-    max-height: 660px;
     border: 2px dashed $default-text-color;
-    border-radius: 15px;
+    max-height: 660px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    overflow: hidden;
     overflow-y: auto;
 
     &Item {
-        margin: 10px;
+      margin: 10px;
     }
   }
 }

@@ -10,7 +10,7 @@ import styles from './ProductPage.module.scss';
 
 export const ProductPage = () => {
   const [product] = useGlobalState('product');
-  const [isOpen,setIsOpen] = useGlobalState('openImg');
+  const [isOpen, setIsOpen] = useGlobalState('openImg');
 
   return (
     <>
@@ -35,10 +35,7 @@ export const ProductPage = () => {
               <h1 className={styles.productTitle}>{product.name}</h1>
               <div className={styles.productInfo}>
                 <h2 className={styles.productPrice}>{product.price}$</h2>
-                <LikeButton
-                  product={product}
-                  styleButton={styles.productButton}
-                />
+                <LikeButton product={product} />
               </div>
             </div>
           </>

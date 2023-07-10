@@ -37,6 +37,7 @@
   &Info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 60%;
   }
 
@@ -44,16 +45,5 @@
     font-size: $size32px;
     color: $default-text-color;
     font-family: $font-anek;
-  }
-
-  &Button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    background-color: $primary-color;
-    padding: 0;
-    border-radius: 6px;
   }
 }

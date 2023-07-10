@@ -24,6 +24,18 @@ export const FavouriteProduct = () => {
             bgcolor: 'background.paper',
             position: 'relative',
             overflowY: 'auto',
+            '& .MuiDataGrid-virtualScroller::-webkit-scrollbar': {
+              width: '0.4em',
+            },
+            '& .MuiDataGrid-virtualScroller::-webkit-scrollbar-track': {
+              background: '#f1f1f1',
+            },
+            '& .MuiDataGrid-virtualScroller::-webkit-scrollbar-thumb': {
+              backgroundColor: '#888',
+            },
+            '& .MuiDataGrid-virtualScroller::-webkit-scrollbar-thumb:hover': {
+              background: '#555',
+            },
             '& ul': { padding: 10 },
           }}
           subheader={<li />}

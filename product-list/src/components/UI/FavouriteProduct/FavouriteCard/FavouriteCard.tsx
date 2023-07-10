@@ -7,6 +7,9 @@ import Typography from '@mui/material/Typography';
 
 import { API_CALLS, FoodDataType, STATE_DATA_CALLS } from '../../../../types';
 import { useGlobalState } from '../../../../state';
+import { LikeButton } from '../../../Buttons/LikeButton';
+
+import styles from './FavouriteCard.module.scss';
 
 type Props = {
   card: FoodDataType;
@@ -15,40 +18,60 @@ type Props = {
 export const FavouriteCard = ({ card }: Props) => {
   const [product, setProduct] = useGlobalState(STATE_DATA_CALLS.PRODUCT);
 
-  const handleClickCard = () => {
+  const handleClickCard = (): void => {
     setProduct(card);
   };
+
+  const stingLength = (num: number): string => {
+    if (card.name.length > num) return `${card.name.slice(0, 18)}...`;
+
+    return card.name;
+  };
+
   return (
     <Link
       to={`/product/${card.name}`}
       onClick={handleClickCard}
     >
-      <Card sx={{ display: 'flex' }}>
-        <CardMedia
-          component="img"
-          sx={{ width: 78, height: 78 }}
-          image={`${API_CALLS.DEFAULT_LINK}${card.src}`}
-          alt="Live from space album cover"
-        />
-        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-          <CardContent sx={{ flex: '1 0 auto' }}>
+      <Card sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className={styles.favouriteImg}>
+          <CardMedia
+            component="img"
+            sx={{ width: 78, height: 78 }}
+            image={`${API_CALLS.DEFAULT_LINK}${card.src}`}
+            alt="Live from space album cover"
+          />
+        </div>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+          }}
+        >
+          <CardContent
+            sx={{ flex: '1 0 auto' }}
+            style={{ paddingBottom: '6px' }}
+          >
             <Typography
               component="div"
               variant="h6"
+              fontSize={16}
             >
-              Live From Space
+              {stingLength(18)}
             </Typography>
             <Typography
+              className={styles.favourite}
               variant="subtitle1"
               color="text.secondary"
               component="div"
             >
-              Mac Miller
+              <div className={styles.favouriteDescr}>
+                <span className={styles.favouritePrice}>${card.price}</span>
+                <LikeButton product={card} />
+              </div>
             </Typography>
           </CardContent>
-          <Box
-            sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}
-          ></Box>
         </Box>
       </Card>
     </Link>

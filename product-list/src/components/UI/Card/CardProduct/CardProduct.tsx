@@ -49,7 +49,6 @@ export const CardProduct = ({ card }: Props) => {
           <div className={styles.cardPriceBlock}>
             <span className={styles.cardPrice}>${card.price}</span>
             <LikeButton
-              styleButton={styles.cardButtonLike}
               product={card}
             />
           </div>

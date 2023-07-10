@@ -8,11 +8,10 @@ import { FoodDataType, STATE_DATA_CALLS } from '../../../types';
 import styles from './LikeButton.module.scss';
 
 type Props = {
-  styleButton: string;
   product: FoodDataType;
 };
 
-export const LikeButton = ({ styleButton, product }: Props) => {
+export const LikeButton = ({ product }: Props) => {
   const [favorites, setFavourites] = useGlobalState(STATE_DATA_CALLS.FAVOURITE);
 
   const clickLiked = (ev: React.MouseEvent): void => {
@@ -28,14 +27,16 @@ export const LikeButton = ({ styleButton, product }: Props) => {
   return (
     <CardActions
       disableSpacing
-      className={styleButton}
+      className={styles.buttonLike}
       onClick={(ev) => clickLiked(ev)}
     >
       <IconButton
-        aria-label="add to favorites"
+        aria-label="add to favourites"
         style={{ padding: 0 }}
       >
-        <FavoriteIcon className={styles.icon} />
+        <FavoriteIcon
+          className={styles.iconLiked}
+        />
       </IconButton>
     </CardActions>
   );
