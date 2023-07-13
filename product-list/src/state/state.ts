@@ -2,17 +2,6 @@ import { createGlobalState } from 'react-hooks-global-state';
 
 import { API_CALLS, FoodDataType } from '../types';
 
-const getData = async (): Promise<FoodDataType[] | []> => {
-  try {
-    const response = await fetch(`${API_CALLS.ALL_PRODUCTS}`);
-    if (!response.ok) return [];
-
-    return await response.json();
-  } catch (er) {
-    return [];
-  }
-};
-
 type InitialType = {
   data: FoodDataType[];
   openImg: boolean;
@@ -22,7 +11,7 @@ type InitialType = {
 };
 
 export const InitialState: InitialType = {
-  data: await getData(),
+  data: [],
   openImg: false,
   favourite: [],
   isLiked: [],
