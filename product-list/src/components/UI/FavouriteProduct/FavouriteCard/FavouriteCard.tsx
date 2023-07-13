@@ -23,7 +23,7 @@ export const FavouriteCard = ({ card }: Props) => {
           component="img"
           sx={{ width: 78, height: 78 }}
           image={`${API_CALLS.DEFAULT_LINK}${card.src}`}
-          alt="Live from space album cover"
+          alt={card.name}
         />
       </div>
       <Box

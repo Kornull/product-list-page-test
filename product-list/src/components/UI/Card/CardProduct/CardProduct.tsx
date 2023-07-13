@@ -1,12 +1,11 @@
-import { Link } from 'react-router-dom';
-
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 
+import { Link } from 'react-router-dom';
+
 import { returnStringLen } from '../../../../helpers';
-import { useGlobalState } from '../../../../state';
-import { API_CALLS, FoodDataType, STATE_DATA_CALLS } from '../../../../types';
+import { API_CALLS, FoodDataType } from '../../../../types';
 
 import { LikeButton } from '../../../Buttons/LikeButton';
 
@@ -17,17 +16,8 @@ type Props = {
 };
 
 export const CardProduct = ({ card }: Props) => {
-  const [product, setProduct] = useGlobalState(STATE_DATA_CALLS.PRODUCT);
-
-  const handleClickCard = () => {
-    setProduct(card);
-  };
-
   return (
-    <Link
-      to={`/product/${card.name}`}
-      onClick={handleClickCard}
-    >
+    <Link to={`/product/${card.id}`}>
       <Card
         sx={{ maxWidth: 262, borderRadius: 7, boxShadow: 'none' }}
         className={styles.card}

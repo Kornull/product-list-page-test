@@ -1,16 +1,32 @@
-import { useGlobalState } from '../../state';
+import { useEffect } from 'react';
+import { useParams } from 'react-router';
 
 import { FavouriteProduct } from '../../components/UI/FavouriteProduct';
-import { ImageButton } from '../../components/Buttons/ImageButton';
 import { ImageView } from '../../components/UI/ImageView';
-
+import { ImageButton } from '../../components/Buttons/ImageButton';
 import { LikeButton } from '../../components/Buttons/LikeButton';
+
+import { useGlobalState } from '../../state';
+import { STATE_DATA_CALLS } from '../../types';
 
 import styles from './ProductPage.module.scss';
 
 export const ProductPage = () => {
-  const [product] = useGlobalState('product');
-  const [isOpen, setIsOpen] = useGlobalState('openImg');
+  const params = useParams();
+  const [product, setProduct] = useGlobalState(STATE_DATA_CALLS.PRODUCT);
+  const [data] = useGlobalState(STATE_DATA_CALLS.DATA);
+  const [isOpen, setIsOpen] = useGlobalState(STATE_DATA_CALLS.OPEN_IMG);
+
+  const updateProduct = () => {
+    if (params.id !== 'undefined') {
+      const el = data.filter((el) => `${el.id}` === params.id);
+      setProduct(el[0]);
+    }
+  };
+
+  useEffect(() => {
+    updateProduct();
+  }, [product]);
 
   return (
     <>

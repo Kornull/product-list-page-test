@@ -15,18 +15,19 @@ const getData = async (): Promise<FoodDataType[] | []> => {
 
 type InitialType = {
   data: FoodDataType[];
-  product: FoodDataType | null;
   openImg: boolean;
   favourite: FoodDataType[];
   isLiked: number[];
+  product: FoodDataType | null;
 };
 
 export const InitialState: InitialType = {
   data: await getData(),
-  product: null,
   openImg: false,
   favourite: [],
   isLiked: [],
+  product: null,
 };
 
-export const { useGlobalState } = createGlobalState(InitialState);
+export const { useGlobalState, setGlobalState } =
+  createGlobalState(InitialState);
