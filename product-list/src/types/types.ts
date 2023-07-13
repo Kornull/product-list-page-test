@@ -15,4 +15,5 @@ export enum STATE_DATA_CALLS {
   PRODUCT = 'product',
   OPEN_IMG = 'openImg',
   FAVOURITE = 'favourite',
+  LIKED = 'isLiked',
 }

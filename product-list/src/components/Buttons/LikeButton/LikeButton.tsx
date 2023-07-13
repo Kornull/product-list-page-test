@@ -13,14 +13,18 @@ type Props = {
 
 export const LikeButton = ({ product }: Props) => {
   const [favorites, setFavourites] = useGlobalState(STATE_DATA_CALLS.FAVOURITE);
+  const [isLiked, setIsLiked] = useGlobalState(STATE_DATA_CALLS.LIKED);
 
   const clickLiked = (ev: React.MouseEvent): void => {
     ev.preventDefault();
     if (!favorites.includes(product)) {
       setFavourites([...favorites, product]);
+      setIsLiked([...isLiked, product.id]);
     } else {
       const newFavourites = favorites.filter((data) => data.id !== product.id);
+      const liked = isLiked.filter((id) => id !== product.id);
       setFavourites([...newFavourites]);
+      setIsLiked([...liked]);
     }
   };
 
@@ -35,7 +39,9 @@ export const LikeButton = ({ product }: Props) => {
         style={{ padding: 0 }}
       >
         <FavoriteIcon
-          className={styles.iconLiked}
+          className={
+            isLiked.includes(product.id) ? styles.iconLiked : styles.icon
+          }
         />
       </IconButton>
     </CardActions>

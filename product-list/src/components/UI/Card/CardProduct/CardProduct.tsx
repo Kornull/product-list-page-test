@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
+
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 
-import { Link } from 'react-router-dom';
-
+import { returnStringLen } from '../../../../helpers';
 import { useGlobalState } from '../../../../state';
 import { API_CALLS, FoodDataType, STATE_DATA_CALLS } from '../../../../types';
 
@@ -42,15 +43,11 @@ export const CardProduct = ({ card }: Props) => {
           style={{ padding: 0 }}
         >
           <span className={styles.cardDescription}>
-            {card.name.length > 16
-              ? `${card.name.slice(0, 14)}...`
-              : `${card.name}`}
+            {returnStringLen(card.name, 16)}
           </span>
           <div className={styles.cardPriceBlock}>
             <span className={styles.cardPrice}>${card.price}</span>
-            <LikeButton
-              product={card}
-            />
+            <LikeButton product={card} />
           </div>
         </CardContent>
       </Card>

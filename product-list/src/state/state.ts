@@ -17,7 +17,8 @@ type InitialType = {
   data: FoodDataType[];
   product: FoodDataType | null;
   openImg: boolean;
-  favourite: FoodDataType[]
+  favourite: FoodDataType[];
+  isLiked: number[];
 };
 
 export const InitialState: InitialType = {
@@ -25,6 +26,7 @@ export const InitialState: InitialType = {
   product: null,
   openImg: false,
   favourite: [],
+  isLiked: [],
 };
 
 export const { useGlobalState } = createGlobalState(InitialState);
