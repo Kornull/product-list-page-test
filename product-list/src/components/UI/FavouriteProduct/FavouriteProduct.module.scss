@@ -9,12 +9,12 @@
   &List {
     width: inherit;
     min-height: 440px;
-    border: 2px dashed $default-text-color;
     max-height: 660px;
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
     overflow: hidden;
     overflow-y: auto;
+    border: 2px dashed $default-text-color;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 
     &Item {
       margin: 10px;

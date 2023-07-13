@@ -1,19 +1,19 @@
-@import '/src/scss/constants.scss';
+@import '/src/scss/constants';
 
 .header {
   width: 100%;
   height: 100px;
-  background-color: $primary-color;
   font-size: $size32px;
   font-family: $font-anek;
   text-transform: uppercase;
+  background-color: $primary-color;
 
   &Container {
     display: flex;
     align-items: center;
     justify-content: end;
-    max-width: $default-width;
     width: $percent100;
+    max-width: $default-width;
     margin: $default-margin;
     padding: 26px 12px;
   }

@@ -20,16 +20,8 @@ export const ImageButton = ({ isOpen, changeView }: Props) => {
   }, []);
 
   return (
-    <IconButton
-      aria-label="look"
-      size="large"
-      color="default"
-      onClick={handleClick}
-    >
-      <ZoomInIcon
-        fontSize="large"
-        className={`${styles.action} ${isOpen ? styles.success : ''}`}
-      />
+    <IconButton aria-label="look" size="large" color="default" onClick={handleClick}>
+      <ZoomInIcon fontSize="large" className={`${styles.action} ${isOpen ? styles.success : ''}`} />
     </IconButton>
   );
 };

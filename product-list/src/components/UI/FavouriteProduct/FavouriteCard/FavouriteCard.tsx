@@ -4,10 +4,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-import { returnStringLen } from '../../../../helpers';
-import { API_CALLS, FoodDataType } from '../../../../types';
+import { returnStringLen } from 'src/helpers';
+import { API_CALLS, FoodDataType } from 'src/types';
 
-import { LikeButton } from '../../../Buttons/LikeButton';
+import { LikeButton } from 'src/components/Buttons/LikeButton';
 
 import styles from './FavouriteCard.module.scss';
 
@@ -33,15 +33,8 @@ export const FavouriteCard = ({ card }: Props) => {
           width: '100%',
         }}
       >
-        <CardContent
-          sx={{ flex: '1 0 auto' }}
-          style={{ paddingBottom: '6px' }}
-        >
-          <Typography
-            component="div"
-            variant="h6"
-            fontSize={16}
-          >
+        <CardContent sx={{ flex: '1 0 auto' }} style={{ paddingBottom: '6px' }}>
+          <Typography component="div" variant="h6" fontSize={16}>
             {returnStringLen(card.name, 18)}
           </Typography>
           <Typography

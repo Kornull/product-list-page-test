@@ -1,8 +1,8 @@
 import List from '@mui/material/List';
 
-import { useGlobalState } from '../../../state';
+import { useGlobalState } from 'src/state';
 
-import { FoodDataType, STATE_DATA_CALLS } from '../../../types';
+import { FoodDataType, STATE_DATA_CALLS } from 'src/types';
 
 import { FavouriteCard } from './FavouriteCard';
 
@@ -23,10 +23,7 @@ export const FavouriteProduct = () => {
           subheader={<li />}
         >
           {favourites.map((card: FoodDataType) => (
-            <li
-              className={styles.favouriteListItem}
-              key={`${card.name}-${card.id}`}
-            >
+            <li className={styles.favouriteListItem} key={`${card.name}-${card.id}`}>
               <FavouriteCard card={card} />
             </li>
           ))}

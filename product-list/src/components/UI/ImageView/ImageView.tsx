@@ -1,6 +1,6 @@
 import ReactImageMagnify from 'react-image-magnify';
 
-import { API_CALLS } from '../../../types';
+import { API_CALLS } from 'src/types';
 
 import styles from './ImageView.module.scss';
 type Props = {
@@ -29,11 +29,7 @@ export const ImageView = ({ isOpen, name, url }: Props) => {
           },
         }}
       />
-      <img
-        className={isOpen ? styles.close : styles.open}
-        src={urlImage}
-        alt={`${name}`}
-      />
+      <img className={isOpen ? styles.close : styles.open} src={urlImage} alt={`${name}`} />
     </>
   );
 };

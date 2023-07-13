@@ -2,8 +2,8 @@ import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-import { useGlobalState } from '../../../state';
-import { FoodDataType, STATE_DATA_CALLS } from '../../../types';
+import { useGlobalState } from 'src/state';
+import { FoodDataType, STATE_DATA_CALLS } from 'src/types';
 
 import styles from './LikeButton.module.scss';
 
@@ -19,30 +19,22 @@ export const LikeButton = ({ product }: Props) => {
     ev.preventDefault();
     if (!favorites.includes(product)) {
       setFavourites([...favorites, product]);
-      setIsLiked([...isLiked, product.id]);
+      const likedArr = [...isLiked, product.id];
+      setIsLiked(likedArr);
+      localStorage.setItem(STATE_DATA_CALLS.LIKED, `${[...likedArr]}`);
     } else {
       const newFavourites = favorites.filter((data) => data.id !== product.id);
       const liked = isLiked.filter((id) => id !== product.id);
       setFavourites([...newFavourites]);
       setIsLiked([...liked]);
+      localStorage.setItem(STATE_DATA_CALLS.LIKED, `${[...liked]}`);
     }
   };
 
   return (
-    <CardActions
-      disableSpacing
-      className={styles.buttonLike}
-      onClick={(ev) => clickLiked(ev)}
-    >
-      <IconButton
-        aria-label="add to favourites"
-        style={{ padding: 0 }}
-      >
-        <FavoriteIcon
-          className={
-            isLiked.includes(product.id) ? styles.iconLiked : styles.icon
-          }
-        />
+    <CardActions disableSpacing className={styles.btn} onClick={(ev) => clickLiked(ev)}>
+      <IconButton aria-label="add to favourites" style={{ padding: 0 }}>
+        <FavoriteIcon className={isLiked.includes(product.id) ? styles.iconLiked : styles.icon} />
       </IconButton>
     </CardActions>
   );

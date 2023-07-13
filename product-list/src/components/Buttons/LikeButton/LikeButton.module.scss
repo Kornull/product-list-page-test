@@ -2,19 +2,19 @@
 
 .icon {
   color: $default-color;
-}
 
-.iconLiked {
+&Liked {
   color: $default-text-color;
 }
+}
 
-.buttonLike {
+.btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 28px;
   height: 28px;
-  background-color: $primary-color;
   padding: 0;
+  background-color: $primary-color;
   border-radius: 6px;
 }

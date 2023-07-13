@@ -3,7 +3,7 @@ import AutoSizer from 'react-virtualized-auto-sizer';
 
 import { CardProduct } from '../CardProduct';
 
-import { FoodDataType } from '../../../../types';
+import { FoodDataType } from 'src/types';
 
 import styles from './CardList.module.scss';
 
@@ -29,10 +29,7 @@ export const CardList = ({ cards }: Props) => {
               const index = columnIndex + rowIndex * 4;
               return (
                 <div style={{ ...style }}>
-                  <CardProduct
-                    card={cards[index]}
-                    key={columnIndex}
-                  />
+                  <CardProduct card={cards[index]} key={columnIndex} />
                 </div>
               );
             }}
