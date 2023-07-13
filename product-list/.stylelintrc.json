@@ -1,0 +1,27 @@
+{
+    "extends": [
+      "stylelint-config-standard-scss",
+      "stylelint-config-rational-order"
+    ],
+    "ignoreFiles": ["dist/**"],
+    "plugins": ["stylelint-order", "stylelint-config-rational-order/plugin"],
+    "rules": {
+      "media-feature-name-disallowed-list": [
+        "^max-width",
+        {
+          "message": "Use min-width for a mobile-first approach (media-feature-name-disallowed-list)"
+        }
+      ],
+
+      "number-leading-zero": null,
+      "order/order": ["custom-properties", "declarations"],
+      "order/properties-order": ["display", "width", "height"],
+      "plugin/rational-order": [
+        true,
+        {
+          "border-in-box-model": false,
+          "empty-line-between-groups": false
+        }
+      ]
+    }
+  }
