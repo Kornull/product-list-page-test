@@ -3,10 +3,20 @@
 .product {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: $percent100;
   height: 600px;
   padding: 10px;
+
+  &Card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: $font-anek;
+    width: $percent100;
+    height: 400px;
+    margin: $default-margin;
+  }
 
   &Img {
     display: flex;
@@ -18,7 +28,7 @@
     height: 400px;
 
     &Container {
-    position: relative;
+      position: relative;
       height: 240px;
     }
   }
@@ -27,18 +37,18 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 560px;
+    min-width: 400px;
   }
 
   &Title {
-    font-size: $size24px;
+    font-size: 32px;
   }
 
   &Info {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 60%;
+    width: 260px;
   }
 
   &Price {

@@ -24,7 +24,7 @@ export const CardProduct = ({ card }: Props) => {
     setProduct(card);
   };
   return (
-    <Link to={`/product/${card.id}`} onClick={handleClick}>
+    <Link to={`/product/${card.name}`} onClick={handleClick}>
       <Card sx={{ maxWidth: 262, borderRadius: 7, boxShadow: 'none' }} className={styles.card}>
         <CardMedia
           component="img"

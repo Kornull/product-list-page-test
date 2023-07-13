@@ -14,6 +14,7 @@ export const FavouriteProduct = () => {
   return (
     <div className={styles.favourite}>
       <div className={styles.favouriteList}>
+        <h2 className={styles.favouriteTitle}>Favorites</h2>
         <List
           sx={{
             width: '100%',
@@ -23,7 +24,7 @@ export const FavouriteProduct = () => {
           subheader={<li />}
         >
           {favourites.map((card: FoodDataType) => (
-            <li className={styles.favouriteListItem} key={`${card.name}-${card.id}`}>
+            <li className={styles.favouriteTitle} key={`${card.name}-${card.id}`}>
               <FavouriteCard card={card} />
             </li>
           ))}

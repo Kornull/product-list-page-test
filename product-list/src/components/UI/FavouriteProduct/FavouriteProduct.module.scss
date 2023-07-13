@@ -1,10 +1,17 @@
-@import '../../../scss/constants';
+@import 'src/scss/constants';
 
 .favourite {
   position: relative;
   width: 320px;
   height: inherit;
   margin-bottom: 25px;
+
+  &Title {
+    font-size: $size24px;
+    text-transform: uppercase;
+    font-family: $font-anek;
+    margin: 10px 0 0 10px;
+  }
 
   &List {
     width: inherit;

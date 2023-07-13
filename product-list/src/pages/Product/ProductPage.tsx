@@ -17,7 +17,7 @@ export const ProductPage = () => {
       <FavouriteProduct />
       <div className={styles.product}>
         {product !== null && (
-          <>
+          <div className={styles.productCard}>
             <div className={styles.productImg}>
               <div className={styles.productImgContainer}>
                 <ImageView isOpen={isOpen} name={product.name} url={product.src} />
@@ -31,7 +31,7 @@ export const ProductPage = () => {
                 <LikeButton product={product} />
               </div>
             </div>
-          </>
+          </div>
         )}
       </div>
     </>

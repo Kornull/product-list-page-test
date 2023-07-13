@@ -1,7 +1,7 @@
 import { FixedSizeGrid as List } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
 
-import { CardProduct } from '../CardProduct';
+import { CardProduct } from './CardProduct';
 
 import { FoodDataType } from 'src/types';
 
