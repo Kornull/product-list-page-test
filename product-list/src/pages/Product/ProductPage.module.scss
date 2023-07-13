@@ -23,7 +23,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: $percent100;
     max-width: 248px;
     height: 400px;
 
@@ -41,7 +41,7 @@
   }
 
   &Title {
-    font-size: 32px;
+    font-size: $size32px;
   }
 
   &Info {
