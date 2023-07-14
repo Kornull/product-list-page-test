@@ -1,9 +1,9 @@
 # Product-list-Page-test
 
-### Screen:![Screenshot from 2023-07-14 09-02-15](https://github.com/Kornull/product-list-page-test/assets/96052707/dbc6bb7b-842f-4d10-828b-5e2526257c46)
+### Screen:
 
+### Task:![products](https://github.com/Kornull/product-list-page-test/assets/96052707/6d0c03b5-1a81-4d0c-84bd-f6c8028f38f2)
 
-### Task:
 
 ### Test task for React Front-end Developer, NC-One
 #### Pages:
