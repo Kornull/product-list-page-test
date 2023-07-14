@@ -1,0 +1,24 @@
+@import '../../../../scss/constants';
+
+.favourite {
+  width: 180px;
+  font-size: $size20px;
+
+  &Img {
+    width: 70px;
+  }
+
+  &Descr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  &Price {
+    font-size: $size20px;
+    font-family: $font-anek;
+    text-align: center;
+  }
+}

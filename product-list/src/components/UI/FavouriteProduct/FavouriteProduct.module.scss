@@ -1,0 +1,30 @@
+@import 'src/scss/constants';
+
+.favourite {
+  position: relative;
+  width: 320px;
+  height: inherit;
+  margin-bottom: 25px;
+
+  &Title {
+    font-size: $size24px;
+    text-transform: uppercase;
+    font-family: $font-anek;
+    margin: 10px 0 0 10px;
+  }
+
+  &List {
+    width: inherit;
+    min-height: 440px;
+    max-height: 660px;
+    overflow: hidden;
+    overflow-y: auto;
+    border: 2px dashed $default-text-color;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+
+    &Item {
+      margin: 10px;
+    }
+  }
+}

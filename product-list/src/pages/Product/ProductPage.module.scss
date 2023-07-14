@@ -1,0 +1,59 @@
+@import '../../scss/constants';
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $percent100;
+  height: 600px;
+  padding: 10px;
+
+  &Card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: $font-anek;
+    width: $percent100;
+    height: 400px;
+    margin: $default-margin;
+  }
+
+  &Img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: $percent100;
+    max-width: 248px;
+    height: 400px;
+
+    &Container {
+      position: relative;
+      height: 240px;
+    }
+  }
+
+  &Description {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 400px;
+  }
+
+  &Title {
+    font-size: $size32px;
+  }
+
+  &Info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 260px;
+  }
+
+  &Price {
+    color: $default-text-color;
+    font-size: $size32px;
+    font-family: $font-anek;
+  }
+}

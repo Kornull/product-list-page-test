@@ -1,0 +1,130 @@
+@import 'https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@600&family=Poppins:wght@400;500&display=swap';
+@import './scss/constants';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 16px;
+    border-radius: 100px;
+  }
+
+
+}
+
+body {
+  margin: 0;
+  font-family: $font-poppins;
+  background-color: $default-color;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img {
+  width: $percent100;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  font: inherit;
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  width: $percent100;
+  max-width: $default-width;
+  margin: $default-margin;
+  background: none;
+}
+
+.list {
+  display: flex;
+  height: calc(100vh - 90px);
+}
+
+.width {
+  width: 262px;
+}
+
+.products {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: $percent100;
+    margin: 0 auto;
+    padding: 16px 10px 4px;
+
+  }
+
+.error {
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    color: $danger-color;
+    font-size: $size32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 16px;
+    border-radius: 20px;
+  }
+
+::-webkit-scrollbar-track {
+    background: $default-text-color;
+      border-radius: 20px;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 20px;
+  }
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
